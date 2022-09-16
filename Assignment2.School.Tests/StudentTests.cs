@@ -27,4 +27,28 @@ public class UnitTest1
         studentString.Should().BeEquivalentTo("ImmutableStudent { Id = 0, GivenName = Peter, Surname = Petersen, StartDate = 05-09-2020 09:15:00, EndDate = 05-09-2021 09:15:00, GraduationDate = 05-09-2021 09:15:00 }");
 
     }
+
+    [Fact]
+    public void ImmutableStudent_comparison_returns_true()
+    {
+
+        var student1 = new ImmutableStudent(0, "Peter", "Petersen", new DateTime(2020, 09, 05, 9, 15, 00), new DateTime(2021, 09, 05, 9, 15, 00), new DateTime(2021, 09, 05, 9, 15, 00));
+        var student2 = new ImmutableStudent(0, "Peter", "Petersen", new DateTime(2020, 09, 05, 9, 15, 00), new DateTime(2021, 09, 05, 9, 15, 00), new DateTime(2021, 09, 05, 9, 15, 00));
+
+        var isEqual = student1 == student2;
+
+        isEqual.Should().BeTrue();
+    }
+
+    [Fact]
+    public void ImmutableStudent_comparison_returns_false()
+    {
+
+        var student1 = new ImmutableStudent(0, "Peter", "Petersen", new DateTime(2020, 09, 05, 9, 15, 00), new DateTime(2021, 09, 05, 9, 15, 00), new DateTime(2021, 09, 05, 9, 15, 00));
+        var student2 = new ImmutableStudent(0, "Peter", "Jensen", new DateTime(2020, 09, 05, 9, 15, 00), new DateTime(2021, 09, 05, 9, 15, 00), new DateTime(2021, 09, 05, 9, 15, 00));
+
+        var isEqual = student1 == student2;
+
+        isEqual.Should().BeFalse();
+    }
 }
