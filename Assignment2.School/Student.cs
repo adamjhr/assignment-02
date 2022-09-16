@@ -4,16 +4,11 @@ using System;
 
 public class Student {
 
-    enum Status {
-        New,
-        Active,
-        Dropout,
-        Graduated
-    }
-
     public int Id { get; init; }
     public string GivenName { get; set; } = null!;
     public string Surname { get; set; } = null!;
+    
+    // skal være readonly
     Status StudentStatus { 
         get {
             if (DateTime.Compare(StartDate, DateTime.Now) >= 0) return Status.New;
