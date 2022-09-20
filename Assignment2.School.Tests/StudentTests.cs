@@ -24,7 +24,7 @@ public class UnitTest1
 
         var studentString = student.ToString();
 
-        studentString.Should().BeEquivalentTo("ImmutableStudent { Id = 0, GivenName = Peter, Surname = Petersen, StartDate = 05/09/2020 09:15:00, EndDate = 05/09/2021 09:15:00, GraduationDate = 05/09/2021 09:15:00 }");
+        studentString.Should().BeEquivalentTo("ImmutableStudent { Id = 0, GivenName = Peter, Surname = Petersen, StartDate = 09/05/2020 09:15:00, EndDate = 09/05/2021 09:15:00, GraduationDate = 09/05/2021 09:15:00 }");
     }
 
     [Fact]
