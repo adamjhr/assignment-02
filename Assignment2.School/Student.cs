@@ -9,7 +9,7 @@ public class Student {
     public string Surname { get; set; } = null!;
     
     // skal være readonly
-    Status StudentStatus { 
+    readonly Status StudentStatus { 
         get {
             if (DateTime.Compare(StartDate, DateTime.Now) >= 0) return Status.New;
             if (DateTime.Compare(EndDate, DateTime.Now) > 0) return Status.Active;

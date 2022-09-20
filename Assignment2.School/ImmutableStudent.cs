@@ -10,8 +10,7 @@ public record ImmutableStudent {
     public string GivenName { get; init; }
     public string Surname { get; init; }
     
-    // skal være readonly
-    Status StudentStatus { 
+    readonly Status StudentStatus { 
         get {
             if (DateTime.Compare(StartDate, DateTime.Now) >= 0) return Status.New;
             if (DateTime.Compare(EndDate, DateTime.Now) > 0) return Status.Active;
