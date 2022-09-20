@@ -10,7 +10,7 @@ public static class Extensions
 
     // Virker ikke
     public static int wordCount(this string words) {
-        return Regex.Split(words, @"\P{L}+").Length;
+        return Regex.Split(words, @"\p{L}+").Length - 1;
     }
 
 }

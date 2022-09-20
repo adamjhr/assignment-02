@@ -60,7 +60,7 @@ public class ExtensionsTests
      [Fact]
         public void Number_of_words_is_5() {
 
-        var words = "   p   ";
+        var words = "word   p  2388,.,.,, testing t word 1";
 
         var result = words.wordCount();
 
