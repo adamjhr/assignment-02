@@ -23,7 +23,7 @@ public class Student {
 
     public string toString() {
 
-        return $"{ Id } { GivenName } { Surname } { StudentStatus } { StartDate.ToString("dd/MM/yyyy") } { EndDate.ToString("dd/MM/yyyy") } { GraduationDate.ToString("dd/MM/yyyy") }";
+        return $"{ Id } { GivenName } { Surname } { StudentStatus } { StartDate.ToString("dd-MM-yyyy") } { EndDate.ToString("dd-MM-yyyy") } { GraduationDate.ToString("dd-MM-yyyy") }";
 
     }
 
